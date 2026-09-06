@@ -22,7 +22,7 @@ jobs:
           echo "VULKAN_SDK=C:\vulkan" >> $env:GITHUB_ENV
 
       - name: Configure
-        run: cmake -B build -DGGML_VULKAN=1 -DCMAKE_BUILD_TYPE=Release
+        run: cmake -B build -DGGML_VULKAN=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="C:\vulkan"
 
       - name: Build
         run: cmake --build build --config Release -j
