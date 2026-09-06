@@ -28,7 +28,7 @@ jobs:
           cmake --build C:\spirv-headers-src\build --target install --config Release
 
       - name: Configure
-        run: cmake -B build -DGGML_VULKAN=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="C:\vulkan;C:\spirv-headers"
+        run: cmake -B build -DGGML_VULKAN=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="C:\vulkan;C:\spirv-headers" -DGGML_AVX2=OFF -DGGML_FMA=OFF -DGGML_AVX512=OFF
 
       - name: Build
         run: cmake --build build --config Release -j
