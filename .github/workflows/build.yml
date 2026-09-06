@@ -38,4 +38,4 @@ jobs:
         with:
           tag_name: build-${{ github.run_number }}
           name: whisper.cpp Vulkan build ${{ github.run_number }}
-          files: whisper-vulkan-windows.zip
+          files: whisper-vulkan-windows.7z
